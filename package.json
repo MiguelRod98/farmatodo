@@ -8,11 +8,15 @@
     "test:e2e": "playwright test tests/e2e/",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0",
     "@types/node": "^20.0.0",
+    "allure-playwright": "^3.4.2",
     "typescript": "^5.0.0"
   }
 }

@@ -6,7 +6,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 1,
   workers: process.env.CI ? 1 : undefined,
-  reporter: process.env.CI ? [['html'], ['github']] : [['html', { open: 'never' }]],
+  reporter: process.env.CI ? [['html'], ['github'], ['allure-playwright']] : [['html', { open: 'never' }], ['allure-playwright']],
   use: {
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',

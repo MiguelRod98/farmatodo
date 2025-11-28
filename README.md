@@ -38,6 +38,23 @@ npm run test:e2e
 npm run test:headed
 ```
 
+### Ver reporte HTML
+```bash
+npm run report
+```
+
+### Generar y ver reporte Allure (con gráficos)
+```bash
+# Generar reporte Allure
+npm run allure:generate
+
+# Abrir reporte Allure
+npm run allure:open
+
+# Servir reporte Allure (más rápido)
+npm run allure:serve
+```
+
 ## 📋 Pruebas Implementadas
 
 ### 1. Prueba de Integración API (PokéAPI)
@@ -119,7 +136,7 @@ farmatodo/
 - **Datos parametrizables**: Objetos de configuración centralizados
 - **Manejo de errores**: Validaciones robustas y reintentos
 - **GitHub Actions**: CI/CD integrado con reportes
-- **Reportes avanzados**: HTML y GitHub reporters
+- **Reportes avanzados**: HTML, GitHub y Allure reporters con gráficos visuales
 
 ### Configuración Avanzada
 - **Screenshots y videos**: Solo en fallos para optimizar espacio
@@ -154,14 +171,35 @@ Wartortle: 225
 ✅ Order completed successfully
 ```
 
+## 📊 Reportes Allure
+
+El proyecto incluye **Allure Reports** para visualización avanzada:
+
+### Características de Allure:
+- **Gráficos de torta** de resultados (passed/failed/broken/skipped)
+- **Tendencias temporales** de ejecución
+- **Métricas de duración** y performance
+- **Screenshots y traces** integrados
+- **Categorización** automática de fallos
+- **Timeline** detallado de ejecución
+
+### Comandos Allure:
+```bash
+# Después de ejecutar pruebas
+npm run allure:generate  # Genera el reporte
+npm run allure:open      # Abre en navegador
+npm run allure:serve     # Sirve directamente
+```
+
 ## 🚀 CI/CD con GitHub Actions
 
 El proyecto incluye configuración completa para GitHub Actions:
 - Ejecución automática en push y pull requests
 - Instalación de dependencias y navegadores
 - Ejecución de todas las pruebas
-- Generación y almacenamiento de reportes
-- Artifacts de screenshots y videos en fallos
+- Generación automática de reportes HTML y Allure
+- Artifacts descargables: `playwright-report` y `allure-report`
+- Screenshots y videos en fallos
 
 ## 📝 Notas de Desarrollo
 
